@@ -107,3 +107,12 @@ footer {
   bottom: 0;
   width: calc(100% - 16px);
 }
+
+.timeDiv {
+  text-align: end;
+  font-weight: 600;
+  font-size: 15px;
+  margin-right: 8%;
+  color: black;
+  margin-bottom: 20px;
+}

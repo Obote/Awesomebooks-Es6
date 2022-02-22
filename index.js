@@ -1,6 +1,8 @@
 import navSection from './modules/navigationbar.js';
 import BookCollection from './modules/class.js';
 
+let luxon;
+
 navSection('list-nav');
 const navList = ['list-nav', 'add-nav', 'contact-nav'];
 navList.forEach((element) => {
@@ -20,13 +22,12 @@ btnAdd.addEventListener('click', () => {
 });
 
 const dateTime = () => {
-  // eslint-disable-next-line no-undef
   const luxonDate = luxon.DateTime.local();
   const dateFormat = `${luxonDate.monthLong} ${luxonDate.day}th ${luxonDate.year}, ${luxonDate.hour}:${luxonDate.minute}:${luxonDate.second} `;
   document.getElementById('timeDiv').innerHTML = `${dateFormat}`;
 };
 
 dateTime();
-window.onload = function onload() {
+window.onload = () => {
   setInterval(dateTime, 100);
 };
